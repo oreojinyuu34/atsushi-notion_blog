@@ -18,11 +18,40 @@
   font-weight: bold;
 }
 
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logoimg {
+  background-color: #17a557;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.logotext {
+  padding-left: 10px;
+  font-size: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.navItem {
+  padding: 1rem;
+}
+
 .navList {
   list-style: none;
   display: flex;
+
   gap: 2rem;
 }
+
+
 
 .navItem a {
   color: white;
@@ -108,6 +137,11 @@
 .footerLogo {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.footerlogo a {
+  display: flex;
+  align-items: center;
 }
 
 .footerNav {

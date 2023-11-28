@@ -1,13 +1,23 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../../src/styles/Home.module.css";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
-        <div className={styles.footerLogo}>
-          <Link href="/">サイト名LOGO</Link>
+        <div className={styles.footerlogo}>
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              alt="メイン画像"
+              width={80} // 画像の幅
+              height={80} // 画像の高さ
+              className={styles.logoimg}
+            />
+            <p className={styles.logotext}>atushi-blog</p>
+          </Link>
         </div>
         <div className={styles.footerNav}>
           <Link href="/">(仮)作成者情報ページ</Link>

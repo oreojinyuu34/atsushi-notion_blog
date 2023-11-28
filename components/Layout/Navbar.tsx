@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../../src/styles/Home.module.css";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,16 @@ const Navbar = () => {
     <nav className={styles.header}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <Link href="/">LOGO</Link>
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              alt="メイン画像"
+              width={80} // 画像の幅
+              height={80} // 画像の高さ
+              className={styles.logoimg}
+            />
+            <p className={styles.logotext}>atushi-blog</p>
+          </Link>
         </div>
         {/* ハンバーガーメニューアイコン */}
         <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
@@ -20,7 +30,13 @@ const Navbar = () => {
         {/* ナビゲーションリンク */}
         <ul className={isOpen ? styles.navListOpen : styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/">リンクページ1</Link>
+            <a
+              href="https://oreojinyuu34.github.io/LP-NOTION/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Notionで作ったブログのLP
+            </a>
           </li>
           <li className={styles.navItem}>
             <Link href="/">リンクページ2</Link>
