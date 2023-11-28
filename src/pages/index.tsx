@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import { getPostsForTopPage } from "lib/notionAPI";
 import SinglePost from "components/Post/SinglePost";
 import Link from "next/link";
+import Image from "next/image";
 
 // Next.jsのgetStaticProps関数を使用し、ビルド時に静的なプロパティを生成
 // getStaticPropsは、ページがユーザーに表示される前に、必要なデータを事前に準備しておくための機能
@@ -35,7 +36,16 @@ export default function Home({ numberOfPosts }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="title">ブログタイトル</h1>
+        {/* <h1 className="title">ブログタイトル</h1> */}
+        <div>
+          <Image
+            src="/main_1280-670.png"
+            alt="メイン画像"
+            width={500} // 画像の幅
+            height={300} // 画像の高さ
+            layout="responsive" // レイアウトタイプ
+          />
+        </div>
         <div className="posts-grid">
           {numberOfPosts.map((post: any) => (
             <SinglePost
