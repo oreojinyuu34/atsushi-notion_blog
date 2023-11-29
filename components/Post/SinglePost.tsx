@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +24,7 @@ const SinglePost = (props: Props) => {
           <div className="card-content">
             {icon && (
               <div className="icon-container">
-                <img src={icon} alt="Post Icon" className="post-icon" />
+                <Image src={icon} alt="Post Icon" className="post-icon" />
               </div>
             )}
             {/* 投稿のタイトル */}

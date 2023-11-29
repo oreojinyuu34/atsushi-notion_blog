@@ -1,4 +1,5 @@
 import { getAllPosts, getSinglePost } from "lib/notionAPI";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -72,7 +73,7 @@ const Post = ({ post }: any) => {
       {/* アイコン、タイトル、説明、日付、タグの表示 */}
       <div className="post-header">
         <span>
-          {icon && <img src={icon} alt="Post Icon" className="post-icon" />}{" "}
+          {icon && <Image src={icon} alt="Post Icon" className="post-icon" />}{" "}
         </span>
         <h2 className="post-title-text">{post.metadata.title}</h2>
         <div className="post-description">{post.metadata.description}</div>
