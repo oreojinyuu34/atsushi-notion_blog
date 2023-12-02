@@ -24,7 +24,13 @@ const SinglePost = (props: Props) => {
           <div className="card-content">
             {icon && (
               <div className="icon-container">
-                <Image src={icon} alt="Post Icon" className="post-icon" />
+                <Image
+                  src={icon}
+                  alt="Post Icon"
+                  width={50}
+                  height={50}
+                  className="post-icon"
+                />
               </div>
             )}
             {/* 投稿のタイトル */}

@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
         {/* ナビゲーションリンク */}
         <ul className={isOpen ? styles.navListOpen : styles.navList}>
-          <li className={styles.navItem}>
+          <li className={isOpen ? styles.navListOpen : styles.navList}>
             <a
               href="https://oreojinyuu34.github.io/LP-NOTION/"
               target="_blank"
@@ -38,10 +38,10 @@ const Navbar = () => {
               Notionで作ったブログのLP
             </a>
           </li>
-          <li className={styles.navItem}>
+          <li className={isOpen ? styles.navListOpen : styles.navList}>
             <Link href="/">リンクページ2</Link>
           </li>
-          <li className={styles.navItem}>
+          <li className={isOpen ? styles.navListOpen : styles.navList}>
             <Link href="/">リンクページ3</Link>
           </li>
         </ul>
