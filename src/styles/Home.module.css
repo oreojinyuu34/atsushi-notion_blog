@@ -45,7 +45,8 @@
 }
 
 .navList {
-  display: none;
+  /* display: none; */
+  gap: 4rem;
 }
 
 
